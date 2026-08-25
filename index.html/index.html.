@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhee Steven Digital Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Sidebar styling */
+    #sidebar {
+      position: fixed;
+      left: -220px;
+      top: 0;
+      width: 220px;
+      height: 100%;
+      background: #222;
+      color: white;
+      transition: left 0.3s;
+      padding-top: 60px;
+    }
+    #sidebar:hover {
+      left: 0;
+    }
+    #sidebar a {
+      display: block;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+    }
+    #sidebar a:hover {
+      background: #444;
+    }
+
+    /* Collapsible About Me */
+    .collapsible {
+      background-color: #eee;
+      color: #333;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+    }
+    .active, .collapsible:hover {
+      background-color: #ccc;
+    }
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <a href="#videos">🎬 Video Edit Works</a>
+    <a href="#certificates">📜 Certificates</a>
+    <a href="#tools">🛠️ Tools</a>
+    <a href="#extra">🌟 Extra Experience</a>
+  </div>
+
+  <!-- Front Page -->
+  <header style="padding:40px; text-align:center; background:#222; color:white;">
+    <h1>Rhee Steven Digital</h1>
+    <p>Multimedia VA | Web Tech & Video Editing</p>
+  </header>
+
+  <!-- About Me with collapse motion -->
+  <section id="about" style="padding:40px;">
+    <button class="collapsible">About Me</button>
+    <div class="content">
+      <p>Hello, I’m Rhee. This section will expand with my information once clicked. I’ll add more details later.</p>
+    </div>
+  </section>
+
+  <!-- Video Edit Works -->
+  <section id="videos" style="padding:40px;">
+    <h2>Video Edit Works</h2>
+    <h3>TikTok</h3>
+    <p>[Add TikTok video links here]</p>
+    <h3>Meta Facebook</h3>
+    <p>[Add Facebook video links here]</p>
+    <h3>Meta Messenger</h3>
+    <p>[Add Messenger video links here]</p>
+  </section>
+
+  <!-- Tools -->
+  <section id="tools" style="padding:40px;">
+    <h2>Tools</h2>
+    <h3>AI Tools</h3>
+    <p>[Add AI tools here]</p>
+    <h3>Video Edit Tools</h3>
+    <p>[Add video editing tools here]</p>
+    <h3>Web Dev Tools</h3>
+    <p>[Add web development tools here]</p>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" style="padding:40px;">
+    <h2>Certificates</h2>
+    <p>[Add certificates here]</p>
+  </section>
+
+  <!-- Extra Experience -->
+  <section id="extra" style="padding:40px;">
+    <h2>Extra Experience</h2>
+    <p>[Add unrelated but valuable experiences here]</p>
+  </section>
+
+  <footer style="text-align:center; background:#222; color:white; padding:20px;">
+    <p>© 2026 Rhee Steven Digital | Built with GitHub Pages</p>
+  </footer>
+
+  <script>
+    // Collapsible About Me
+    var coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
